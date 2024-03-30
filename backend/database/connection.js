@@ -1,14 +1,14 @@
 import { Sequelize } from 'sequelize'
 
 
-export const sequelize = new Sequelize('escreva-seu-proprio-caminho','postgres','fodao',{
+export const sequelize = new Sequelize('escreva_seu_proprio_caminho','postgres','fodao',{
     dialect: 'postgres',
     host:'localhost'
 })
 
 
-sequelize.query('CREATE DATABASE escreva-seu-proprio-caminho')
-.then(console.log('Banco de dados criado com sucesso'))
+// sequelize.query('CREATE DATABASE escreva_seu_proprio_caminho')
+// .then(console.log('Banco de dados criado com sucesso')).catch(error => console.error('Deu ruim',error))
 
 
 
