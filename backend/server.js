@@ -9,4 +9,4 @@ const port = 7777
 
 app.use(express.json())
 
-app.listen(port,()=> console.log(testConnection(),`Server is running on the port  ${port} `))
+app.listen(port,()=> testConnection(), console.log(`Server is running on the port  ${port} `))
