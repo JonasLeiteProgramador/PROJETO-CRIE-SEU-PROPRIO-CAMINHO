@@ -1,5 +1,5 @@
-import { imageEntity } from "../entity/image.entity"
-import { projectEntity } from "../entity/project.entity"
+import { imageEntity } from "../entity/image.entity.js"
+import { projectEntity } from "../entity/project.entity.js"
 import { ERRORS, SUCCESS } from "../shared/messages.js"
 
 export class ProjectService {

@@ -12,10 +12,12 @@ app.use(function (req, res, next) {
     next();
 });
 
-
-app.use('/', routes);
-app.use(express.static('public'));
-
 app.use(express.json())
 
-app.listen(port, () => testConnection(), console.log(`Server is running on the port  ${port} `))
+
+app.use(routes);
+app.use(express.static('public'));
+
+
+
+app.listen(port, () =>  console.log(`Server is running on the port  ${port} `),testConnection())

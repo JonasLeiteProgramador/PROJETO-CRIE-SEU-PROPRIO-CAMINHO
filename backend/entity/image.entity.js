@@ -5,9 +5,9 @@ import { sequelize } from "../database/connection.js";
 
 export const imageEntity = sequelize.define('image',{
     id:{
-        type:DataTypes.UUIDV4,
+        type:DataTypes.UUID,
         allowNull:true,
-        defaultValue:Sequelize.UUID,
+        defaultValue:Sequelize.UUIDV4,
         primaryKey:true
 
     },

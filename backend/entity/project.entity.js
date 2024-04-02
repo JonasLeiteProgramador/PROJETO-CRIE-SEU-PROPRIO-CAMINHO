@@ -3,8 +3,8 @@ import { sequelize } from '../database/connection.js'
 
 export const projectEntity = sequelize.define('Project', {
     id: {
-        type: DataTypes.UUIDV4,
-        defaultValue: Sequelize.UUID,
+        type: DataTypes.UUID,
+        defaultValue: Sequelize.UUIDV4,
         allowNull: true,
         primaryKey: true
     },

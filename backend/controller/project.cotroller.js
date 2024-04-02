@@ -1,10 +1,11 @@
 
-import { ProjectService } from "../services/projetct.service.js";
+import { ProjectService } from "../services/project.service.js";
 
 
 const instanceServiceProject = new ProjectService()
 
 export const createProject = async (req, res) => {
+    
     const { title, description, email, tecnologies, contactNumber } = req.body;
 
     const project = await instanceServiceProject.createProject(
@@ -16,7 +17,7 @@ export const createProject = async (req, res) => {
 }
 
 
-export const readProject = async (req, res) => {
+export const readProjects = async (req, res) => {
     const projects = await instanceServiceProject.readProject()
     res.status(201).json({ projects })
 }
