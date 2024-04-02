@@ -1,6 +1,7 @@
 import { imageEntity } from "../entity/image.entity.js";
+import { ERRORS, SUCCESS } from "../shared/messages.js";
 
-export class imageServices{
+export class ImageServices{
     serviceCreateImage=  async (fileName,url) => {
         try {
             await imageEntity.sync()
@@ -9,7 +10,7 @@ export class imageServices{
                 url
 
             })
-            return {message:'Imagem criada com sucesso!',newImage}
+            return {message:`Imagem ${SUCCESS.CREATED}`,newImage}
 
         } catch (error) {
             console.log('Não foi possivel criar a imagem no banco de dados!',error)
@@ -32,7 +33,7 @@ export class imageServices{
             await imageEntity.sync();
             const imageFinded = await imageEntity.findByPk(id);
             if (!imageFinded) {
-                return 'Não encontrada'
+                return  `Imagem ${ERRORS.NOT_FOUND}`
             }
             await imageEntity.destroy({
                 where: {
@@ -40,7 +41,7 @@ export class imageServices{
                 }
             })
 
-            return 'Imagem apagada com sucesso!'
+            return `Imagem ${SUCCESS.DELETED}`
         } catch (error) { 
             console.log('Não foi possivel apagar a imagem!')
         }

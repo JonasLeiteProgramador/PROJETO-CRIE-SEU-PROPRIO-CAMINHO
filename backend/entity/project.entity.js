@@ -1,7 +1,6 @@
 import { Sequelize, DataTypes } from 'sequelize'
 import { sequelize } from '../database/connection.js'
 
-
 export const projectEntity = sequelize.define('Project', {
     id: {
         type: DataTypes.UUIDV4,

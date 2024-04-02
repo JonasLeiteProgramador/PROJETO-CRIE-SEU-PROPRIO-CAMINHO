@@ -1,11 +1,11 @@
 import multer from 'multer';
 import sharp from 'sharp';
 import fs from 'fs';
-import { imageServices } from '../services/Image.service.js';
+import { ImageServices } from '../services/Image.service.js';
 
 const parser = multer({ dest: 'public/uploads/' });
 
-const instanceServiceImage = new imageServices();
+const instanceServiceImage = new ImageServices();
 
 
 const resizeImage = async (inputPath, outputPath) => {
