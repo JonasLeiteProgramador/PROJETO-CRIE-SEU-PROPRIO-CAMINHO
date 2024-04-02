@@ -22,7 +22,7 @@ const resizeImage = async (inputPath, outputPath) => {
 
 export const createImage = (req, res, next) => {
     console.log('Iniciando processamento de imagem...');
-    parser.single('avatar')(req, res, async err => {
+    parser.single('image')(req, res, async err => {
         if (err) {
             console.error('Erro ao processar imagem:', err);
             res.status(500).json({ message: 'Não foi possível processar a imagem', error: 1, payload: err.message });

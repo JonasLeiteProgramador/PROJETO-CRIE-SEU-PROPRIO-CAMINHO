@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { imageRoutes } from './image.routes.js';
+import { imageRoutes } from './images.routes.js';
 
 
 const routes = Router();

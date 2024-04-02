@@ -1,11 +1,11 @@
-import { imageEntity } from "../entity/image.entity";
+import { imageEntity } from "../entity/image.entity.js";
 
 export class imageServices{
-    serviceCreateImage=  async (filename,url) => {
+    serviceCreateImage=  async (fileName,url) => {
         try {
             await imageEntity.sync()
             const newImage = imageEntity.create({
-                filename,
+                fileName,
                 url
 
             })

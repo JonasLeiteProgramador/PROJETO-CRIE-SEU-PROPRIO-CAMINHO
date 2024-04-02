@@ -7,7 +7,8 @@ export const imageEntity = sequelize.define('image',{
     id:{
         type:DataTypes.UUIDV4,
         allowNull:true,
-        defaultValue:Sequelize.UUID
+        defaultValue:Sequelize.UUID,
+        primaryKey:true
 
     },
     fileName:{
