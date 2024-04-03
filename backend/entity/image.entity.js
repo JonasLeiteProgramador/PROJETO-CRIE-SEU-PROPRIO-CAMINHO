@@ -1,9 +1,10 @@
 import { DataTypes, Sequelize } from "sequelize";
 import { sequelize } from "../database/connection.js";
+import { projectEntity } from "./project.entity.js";
 
 
 
-export const imageEntity = sequelize.define('image',{
+export const imageEntity = sequelize.define('Image',{
     id:{
         type:DataTypes.UUID,
         allowNull:true,
@@ -21,11 +22,20 @@ export const imageEntity = sequelize.define('image',{
         allowNull:true
     },
     projectId: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.UUID,
         allowNull: false,
         references: {
-          model: 'Project', 
+          model: projectEntity,
           key: 'id' 
         }
     }
 })
+
+
+imageEntity.sync()
+  .then(() => {
+    console.log('Tabela "Images" criada com sucesso');
+  })
+  .catch((error) => {
+    console.error('Erro ao sincronizar tabela "Images":', error);
+  });

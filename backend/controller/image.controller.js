@@ -30,7 +30,10 @@ export const createImage = (req, res, next) => {
         }
 
         console.log('Processamento da imagem concluído.tamo  Criando  a imagem...');
+        
+        const { projectId } = req.body; 
 
+        
         const inputPath = req.file.path;
 
         const outputPath = `public/uploads/${req.file.filename}`;
@@ -38,7 +41,7 @@ export const createImage = (req, res, next) => {
         await resizeImage(inputPath, outputPath);
 
 
-        const imageCreated = await instanceServiceImage.serviceCreateImage(req.file.filename, `/uploads/${req.file.filename}`);
+        const imageCreated = await instanceServiceImage.serviceCreateImage(req.file.filename, `/uploads/${req.file.filename}`,projectId);
 
         console.log('Imagem criada com sucesso:', imageCreated);
 

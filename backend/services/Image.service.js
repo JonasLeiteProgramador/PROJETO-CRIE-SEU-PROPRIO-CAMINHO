@@ -1,50 +1,47 @@
 import { imageEntity } from "../entity/image.entity.js";
 import { ERRORS, SUCCESS } from "../shared/messages.js";
 
-export class ImageServices{
-    serviceCreateImage=  async (fileName,url) => {
+export class ImageServices {
+    serviceCreateImage = async (fileName, url, projectId) => {
         try {
-            await imageEntity.sync()
-            const newImage = imageEntity.create({
+            
+        
+            const newImage = await imageEntity.create({
                 fileName,
-                url
+                url,
+                projectId 
+            });
 
-            })
-            return {message:`Imagem ${SUCCESS.CREATED}`,newImage}
-
+            return { message: `Imagem ${SUCCESS.CREATED}`, newImage };
         } catch (error) {
-            console.log('Não foi possivel criar a imagem no banco de dados!',error)
-        }
-
-    }
-
-    serviceReadAllImages = async () => {
-        try {
-            await imageEntity.sync()
-            const images = imageEntity.findAll()
-            return images
-        } catch (error) {
-            console.log('Não foi possivel retornar as mensagens')
+            console.log('Não foi possível criar a imagem no banco de dados!', error);
+            throw error;
         }
     }
 
-    serviceDeleteImage = async (id) => {
+    async serviceReadAllImages() {
         try {
-            await imageEntity.sync();
+            const images = await imageEntity.findAll();
+            return images;
+        } catch (error) {
+            console.log('Não foi possivel retornar as mensagens', error);
+            throw error;
+        }
+    }
+
+    async serviceDeleteImage(id) {
+        try {
             const imageFinded = await imageEntity.findByPk(id);
             if (!imageFinded) {
-                return  `Imagem ${ERRORS.NOT_FOUND}`
+                return `Imagem ${ERRORS.NOT_FOUND}`;
             }
             await imageEntity.destroy({
-                where: {
-                    id
-                }
-            })
-
-            return `Imagem ${SUCCESS.DELETED}`
-        } catch (error) { 
-            console.log('Não foi possivel apagar a imagem!')
+                where: { id }
+            });
+            return `Imagem ${SUCCESS.DELETED}`;
+        } catch (error) {
+            console.log('Não foi possivel apagar a imagem!', error);
+            throw error;
         }
     }
-
 }
