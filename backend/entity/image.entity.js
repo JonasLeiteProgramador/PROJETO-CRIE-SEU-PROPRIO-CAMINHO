@@ -31,10 +31,12 @@ export const imageEntity = sequelize.define('Image',{
     }
 })
 
+imageEntity.belongsTo(projectEntity, { foreignKey: 'projectId' });
+projectEntity.hasMany(imageEntity, { onDelete: 'CASCADE', as: 'images', foreignKey: 'projectId', constraints: false });
 
 imageEntity.sync()
   .then(() => {
-    console.log('Tabela "Images" criada com sucesso');
+    console.log('Tabela "Images" sincronizada com sucesso');
   })
   .catch((error) => {
     console.error('Erro ao sincronizar tabela "Images":', error);

@@ -10,7 +10,7 @@ export const projectEntity = sequelize.define('Project', {
         primaryKey: true
     },
     title: {
-        type: DataTypes.STRING(30),
+        type: DataTypes.STRING,
         allowNull: true
        
     },
@@ -19,7 +19,7 @@ export const projectEntity = sequelize.define('Project', {
         allowNull: false
     },
     email:{
-        type:DataTypes.STRING(30),
+        type:DataTypes.STRING,
         allowNull:true
     },
     technologies:{
@@ -34,11 +34,12 @@ export const projectEntity = sequelize.define('Project', {
    
 });
 
-
 projectEntity.sync()
   .then(() => {
-    console.log('Tabela "Images" criada com sucesso');
+    console.log('Tabela "projects" sincronizada com sucesso');
   })
   .catch((error) => {
     console.error('Erro ao sincronizar tabela "Images":', error);
   });
+
+

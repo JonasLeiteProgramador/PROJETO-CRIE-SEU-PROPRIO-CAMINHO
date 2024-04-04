@@ -39,10 +39,22 @@ export const createImage = (req, res, next) => {
             res.status(400).json({ message: 'Nenhum arquivo enviado' });
             return;
         }
+
+
         
         const inputPath = req.file.path;
 
         const outputPath = `public/uploads/${req.file.filename}`;
+
+        const supportedFormats = ['jpeg', 'png', 'webp'];
+
+        const format = req.file.originalname.split('.').pop().toLowerCase();
+        
+        if (!supportedFormats.includes(format)) {
+            console.error('Formato de imagem não suportado');
+            res.status(400).json({ message: 'Formato de imagem não suportado' });
+            return;
+        }
 
         await resizeImage(inputPath, outputPath);
 

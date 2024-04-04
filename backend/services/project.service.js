@@ -25,16 +25,14 @@
 
         readProject = async () => {
             try {
-
-                await projectEntity.sync()
-                const projects = await projectEntity.findAll()
-
-                return projects
+                const projects = await projectEntity.findAll({
+                    include: 'images' // Este é o alias que você definiu na relação entre Project e Image
+                });
+                return projects;
             } catch (error) {
-                console.log('não foi possivel carregar o projeto', error)
-
+                console.log('Não foi possível carregar os projetos:', error);
+                throw error;
             }
-
         }
 
 
@@ -67,6 +65,7 @@
                 if (!findedProject) {
                     return `Project ${ERRORS.NOT_FOUND}`
                 }
+               
 
                 findedProject.title = title;
                 findedProject.description = description;
@@ -90,15 +89,10 @@
         deleteProject = async (projectId) => {
             try {
                 await projectEntity.sync()
-                const projectFinded = projectEntity.findByPk(projectId,{
-                    include: [imageEntity]
-                })
-        
+                const projectFinded = await projectEntity.findByPk(projectId)
+                  
 
-                await Promise.all(projectFinded.images.map(async (image) =>{
-                    await image.destroy()
-                }))
-
+                await imageEntity.destroy({ where: { projectId: projectId } });
 
                 if(!projectFinded){
                     return `Projeto ${ERRORS.NOT_FOUND}`
