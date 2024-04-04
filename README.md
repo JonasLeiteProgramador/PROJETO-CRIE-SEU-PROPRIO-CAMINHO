@@ -1,49 +1,117 @@
-# Projeto : Você Escreve Seu Proprio Caminho
+# Projeto "Você Escreve Seu Caminho" - README
 
-Este é o README do projeto "Você Escreve Seu Caminho", um marketplace onde os alunos aqui na PDA ao longo de seu trajeto irão postar seus projetos realizados individualmente. Caso um empregador tenha gostado de um projeto específico, o empregador terá o contato para entrar em contato com o mesmo.
+## Introdução
 
-## Funcionalidades Atuais:
+O projeto "Você Escreve Seu Caminho" é um marketplace online onde os alunos da PDA podem compartilhar seus projetos individuais com potenciais empregadores. O objetivo é facilitar a busca por talentos e oportunidades, conectando alunos e empresas de forma eficiente.
 
-### Frontend:
+## Funcionalidades
 
-1. **Criação e Listagem de Projetos**:
-   - Ao preencher o formulário de forma visual, os usuários podem criar novos projetos e armazená-los no banco de dados.
-   - Os projetos criados podem ser recuperados do banco de dados e exibidos na tela.
+### Atuais:
 
-2. **Obtenção de Projetos**:
-   - Os projetos criados podem ser recuperados do banco de dados para exibição.
+#### Frontend:
 
-3. **Exclusão de Projetos**:
-   - Ao pressionar o botão de exclusão, o projeto é removido da lista de projetos.
+##### Criação e Listagem de Projetos:
+Os usuários podem criar novos projetos através de um formulário visual intuitivo.
+Os projetos criados são armazenados no banco de dados e podem ser facilmente listados na tela.
 
-### Backend:
+##### Obtenção de Projetos:
+Os projetos podem ser recuperados do banco de dados e exibidos na tela para visualização.
 
-1. **Criação de Projetos**:
-   - Os usuários podem criar novos projetos e armazená-los no banco de dados.
+##### Exclusão de Projetos:
+Os usuários podem remover projetos da lista de projetos com um simples clique.
 
-2. **Obtenção de Projetos**:
-   - Os projetos criados podem ser recuperados do banco de dados para exibição.
+#### Backend:
 
-3. **Exclusão de Projetos**:
-   - Os usuários têm a capacidade de excluir projetos existentes do banco de dados.
+##### Criação de Projetos:
+Armazena os projetos de forma segura e eficiente no banco de dados.
 
-## Funcionalidades Futuras (A serem implementadas):
+##### Obtenção de Projetos:
+Recupera os projetos do banco de dados para que possam ser exibidos no frontend.
 
-1. Implementação da página de registro/login para os usuários.
-2. Desenvolvimento da lógica para a autenticação usando JWT.
-3. Adição de funcionalidades para a página de adicionar projeto, permitindo que os usuários insiram informações como título, descrição, imagens e informações de contato.
-4. Implementação de uma página para listar os projetos disponíveis.
-5. Desenvolvimento da lógica para permitir que os usuários vejam os detalhes de um projeto específico.
-6. Adição de funcionalidades para atualizar projetos existentes.
-7. Melhorias na interface do usuário para uma experiência mais amigável.
-8. Refatoração do código para melhorar a organização e a legibilidade.
-9. Implementação de testes para garantir a robustez do sistema.
-10. Adição de funcionalidades de validação para garantir a integridade dos dados inseridos pelos usuários.
-11. Adaptação do sistema para suportar upload de imagens e armazenamento seguro das mesmas.
-12. Implementação de um sistema de notificação para alertar os usuários sobre atividades relevantes em seus projetos.
-13. Adição de uma funcionalidade de pesquisa para permitir que os usuários encontrem projetos específicos com facilidade.
-14. Desenvolvimento de uma API REST completa para interação com o frontend.
+##### Exclusão de Projetos:
+Remove os projetos do banco de dados de maneira segura e controlada.
 
-Este projeto está em fase inicial de desenvolvimento, e mais funcionalidades serão adicionadas gradualmente. Se você tiver alguma sugestão ou encontrar algum problema, sinta-se à vontade para contribuir ou entrar em contato com o profissional de desenvolvimento.
+### Futuras:
 
-**Nota:** Este README será atualizado conforme novas funcionalidades forem implementadas.
+Autenticação:
+Implementação de registro e login de usuários para um acesso seguro.
+Autenticação robusta usando tokens JWT para garantir a segurança do sistema.
+Página de Adicionar Projeto:
+Permitir que os usuários insiram informações completas sobre seus projetos, como título, descrição, imagens e informações de contato.
+Página de Listar Projetos:
+Exibir os projetos disponíveis de forma organizada e amigável ao usuário.
+Detalhes do Projeto:
+Permitir que os usuários visualizem todos os detalhes de um projeto específico, incluindo imagens e informações de contato.
+Atualização de Projetos:
+Permitir que os usuários atualizem seus projetos com novas informações e conteúdos.
+Interface do Usuário:
+Melhorar a experiência do usuário com um design moderno e intuitivo.
+Refatoração:
+Melhorar a organização e legibilidade do código para facilitar a manutenção.
+Testes:
+Implementar testes automatizados para garantir a robustez e confiabilidade do sistema.
+Validação:
+Garantir a integridade dos dados inseridos pelos usuários com validação completa.
+Upload de Imagens:
+Permitir o upload de imagens para os projetos e armazená-las de forma segura.
+Notificações:
+Alertar os usuários sobre atividades relevantes em seus projetos, como novos contatos ou comentários.
+Pesquisa:
+Permitir que os usuários encontrem projetos específicos com facilidade através de uma funcionalidade de pesquisa avançada.
+API REST:
+Desenvolver uma API REST completa para interação com o frontend, permitindo integrações com outras plataformas.
+
+## Contribuindo para o Projeto
+
+Este projeto está em fase inicial de desenvolvimento e novas funcionalidades serão adicionadas gradualmente. Se você tiver alguma sugestão, encontrar algum problema ou deseja contribuir para o desenvolvimento do projeto, você é muito bem-vindo!
+
+Para contribuir:
+
+1. Crie um fork do repositório no GitHub.
+2. Faça suas alterações em uma branch separada.
+3. Envie um pull request para a branch principal do projeto.
+
+## Como Rodar o Projeto
+
+### Pré-requisitos:
+
+- Node.js instalado
+- Yarn ou npm
+
+### Passos:
+
+### 1. Clone o repositório do GitHub:
+
+git clone https://github.com/seu-nome-de-usuario/voce-escreve-seu-caminho.git
+
+### 2. Acesse a pasta do backend:
+
+cd backend
+
+### 3. Instale as dependências:
+
+yarn ou npm i
+
+### 4. Inicie o servidor backend:
+
+yarn dev ou npm run dev
+
+### 5. Acesse a pasta do frontend:
+
+cd frontend
+
+### 6. Instale as dependências:
+
+yarn ou npm i
+
+### 7. Inicie o servidor frontend:
+
+yarn dev ou npm run dev
+
+### 8. Acesse o projeto em no localhost em que o react disponibiliza!
+
+## Observações:
+
+Este README será atualizado conforme novas funcionalidades forem implementadas.
+
+Para mais informações, consulte a documentação específica do frontend e backend.
