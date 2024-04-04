@@ -1,4 +1,4 @@
-# Projeto "Você Escreve Seu Proprio Caminho" - README
+# Projeto : Você Escreve Seu Proprio Caminho
 
 Este é o README do projeto "Você Escreve Seu Caminho", um marketplace onde os alunos aqui na PDA ao longo de seu trajeto irão postar seus projetos realizados individualmente. Caso um empregador tenha gostado de um projeto específico, o empregador terá o contato para entrar em contato com o mesmo.
 
