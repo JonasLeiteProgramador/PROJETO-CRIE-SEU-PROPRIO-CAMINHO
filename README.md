@@ -1,4 +1,4 @@
-# Projeto "Você Escreve Seu Caminho" - README
+# Projeto Você Escreve Seu Caminho
 
 ## Introdução
 
