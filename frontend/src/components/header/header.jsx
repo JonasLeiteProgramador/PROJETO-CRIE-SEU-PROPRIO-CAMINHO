@@ -1,5 +1,5 @@
 import React from 'react';
-import './header.css'; // Importa o arquivo CSS para estilos
+import './header.css'; 
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -18,6 +18,10 @@ const Header = () => {
           </li>
           <li>
             <Link to="/criar-projeto">Adicione um projeto</Link>
+          </li>
+
+          <li>
+            <Link to="/projetos">Ver projetos</Link>
           </li>
         </ul>
       </nav>

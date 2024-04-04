@@ -1,7 +1,7 @@
 .header {
   background-color: #1A5275;;
   color: #fff;
-  padding: 1.5vw 5vw; /* Alterando para unidades relativas */
+  padding: 1.5vw 5vw; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,8 +9,8 @@
 
   
   .logo img {
-    width: 80px; /* Ajuste conforme necessário */
-    height: auto; /* Para manter a proporção */
+    width: 80px; 
+    height: auto; 
     border: 1px solid #196c06;
     border-radius: 19%;
     animation: fadeInDown 1s ease;  
@@ -76,7 +76,7 @@
   
  
   .logo {
-    font-size: 2.5vw; /* Alterando para unidade relativa */
+    font-size: 2.5vw;
   }
   
   .menu {

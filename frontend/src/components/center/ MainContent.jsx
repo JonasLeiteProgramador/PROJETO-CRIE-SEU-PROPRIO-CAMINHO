@@ -1,6 +1,7 @@
 import React from 'react';
 
-import './center.css'; // Importa o arquivo CSS para estilos
+import './center.css'; 
+import { Link } from 'react-router-dom';
 
 const MainContent = () => {
   return (
@@ -8,7 +9,7 @@ const MainContent = () => {
     <div className="content">
       <h1>Desbrave seu próprio caminho</h1>
       <p>Estamos aqui para inspirar e capacitar você a criar seus próprios caminhos alcançar suas metas.Metas ou sonhos vamos juntos transformar  em realidade.</p>
-      <button className='btn home'>Comece a criar agora!</button>
+      <Link to='/criar-projeto' className='btn home'>Comece a criar agora!</Link>
     </div>
   </main>
   );
