@@ -1,4 +1,4 @@
-# Projeto "Você Escreve Seu Caminho" - README
+# Projeto Você Escreve Seu Caminho
 
 ## Introdução
 
@@ -134,3 +134,7 @@ yarn dev ou npm run dev
 ## Observações:
 
 Este README será atualizado conforme novas funcionalidades forem implementadas.
+
+
+ ### A dependência do sharp tem um pequeno problema quando executado em sistemas linux/MACOS
+Para resolver isto basta executar o comando  yarn add sharp --ignore-engines ou npm i sharp --ignore-engines
