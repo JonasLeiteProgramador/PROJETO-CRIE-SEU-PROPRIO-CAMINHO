@@ -1,8 +1,13 @@
+body{
+  background-color: #1A5276;
+  box-sizing: border-box;
+}
 .container {
-    max-width: 1200px;  
-    margin: 0 auto;
+    width: 80vw;
     padding: 20px;
-    background-color: rgba(46, 204, 113, 0.8);
+    background-color: rgba(46, 204, 113, 0.9);
+    border-radius: 1%;
+  
   }
   
   .project {
@@ -34,7 +39,7 @@
   }
   
   .project .images img {
-    max-width: 200px;
+    max-width: 20%;
     height: auto;
     margin-right: 10px;
     margin-bottom: 10px;

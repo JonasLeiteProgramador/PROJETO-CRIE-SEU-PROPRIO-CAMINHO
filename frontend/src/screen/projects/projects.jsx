@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './projects.css';
+import '../../root.css'
 import Header from '../../components/header/header';
 
 const ProjectList = () => {
