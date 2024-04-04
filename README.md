@@ -129,7 +129,7 @@ yarn ou npm i
 
 yarn dev ou npm run dev
 
-### 8. Acesse o projeto em no localhost em que o react disponibiliza!
+### 8. Acesse o projeto  no localhost em que o react disponibiliza!
 
 ## Observações:
 
