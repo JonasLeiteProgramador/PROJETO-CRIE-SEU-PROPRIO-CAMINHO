@@ -34,31 +34,52 @@ Remove os projetos do banco de dados de maneira segura e controlada.
 ### Futuras:
 
 Autenticação:
-Implementação de registro e login de usuários para um acesso seguro.
-Autenticação robusta usando tokens JWT para garantir a segurança do sistema.
-Página de Adicionar Projeto:
-Permitir que os usuários insiram informações completas sobre seus projetos, como título, descrição, imagens e informações de contato.
-Página de Listar Projetos:
-Exibir os projetos disponíveis de forma organizada e amigável ao usuário.
-Detalhes do Projeto:
-Permitir que os usuários visualizem todos os detalhes de um projeto específico, incluindo imagens e informações de contato.
-Atualização de Projetos:
+## Implementação de registro e login de usuários para um acesso seguro.
+
+## Autenticação robusta usando tokens JWT para garantir a segurança do sistema.
+
+ ## Página de Adicionar Projeto:
+
+## Permitir que os usuários insiram informações completas sobre seus projetos, como título, descrição, imagens e informações de contato.
+
+## Página de Listar Projetos:
+
+### Exibir os projetos disponíveis de forma mais organizada e amigável ao usuário.
+
+### Detalhes do Projeto:
+
+### Permitir que os usuários visualizem todos os detalhes de um projeto específico, incluindo imagens e informações de contato.
+
+### Atualização de Projetos:
+
 Permitir que os usuários atualizem seus projetos com novas informações e conteúdos.
-Interface do Usuário:
+
+## Interface do Usuário:
+
 Melhorar a experiência do usuário com um design moderno e intuitivo.
-Refatoração:
+
+## Refatoração:
 Melhorar a organização e legibilidade do código para facilitar a manutenção.
-Testes:
+
+## Testes:
 Implementar testes automatizados para garantir a robustez e confiabilidade do sistema.
-Validação:
+
+## Validação:
+
 Garantir a integridade dos dados inseridos pelos usuários com validação completa.
-Upload de Imagens:
+
+## Upload de Imagens:
 Permitir o upload de imagens para os projetos e armazená-las de forma segura.
-Notificações:
+
+## Notificações:
+
 Alertar os usuários sobre atividades relevantes em seus projetos, como novos contatos ou comentários.
-Pesquisa:
+
+## Pesquisa:
+
 Permitir que os usuários encontrem projetos específicos com facilidade através de uma funcionalidade de pesquisa avançada.
 API REST:
+
 Desenvolver uma API REST completa para interação com o frontend, permitindo integrações com outras plataformas.
 
 ## Contribuindo para o Projeto
@@ -113,5 +134,3 @@ yarn dev ou npm run dev
 ## Observações:
 
 Este README será atualizado conforme novas funcionalidades forem implementadas.
-
-Para mais informações, consulte a documentação específica do frontend e backend.
