@@ -11,16 +11,8 @@ export const projectEntity = sequelize.define('Project', {
     },
     title: {
         type: DataTypes.STRING(30),
-        allowNull: true,
-        validate: {
-            notEmpty: {
-                msg: "Esse campo não pode estar vazio!"
-            },
-            len: {
-                args: [10, 30],
-                msg: "Esse campo deve ter pelo menos de 10 a 30 caracteres"
-            }
-        }
+        allowNull: true
+       
     },
     description: {
         type: DataTypes.TEXT,

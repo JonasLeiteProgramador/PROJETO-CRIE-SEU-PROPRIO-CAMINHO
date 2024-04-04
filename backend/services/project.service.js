@@ -5,24 +5,21 @@
     export class ProjectService {
         createProject = async (title, description, email, technologies, contactNumber) => {
             try {
-
-                await projectEntity.sync()
+                await projectEntity.sync();
+                
                 const newProject = await projectEntity.create({
                     title, 
                     description, 
                     email,
                     technologies,
                     contactNumber,
-                    
-                })
-
-                return { message: `Projeto ${SUCCESS.CREATED}`, id:newProject.id,newProject }
+                });
+                
+                return { message: `Projeto ${SUCCESS.CREATED}`, id: newProject.id, newProject };
             } catch (error) {
-                console.log('não foi possivel criar o projeto', error)
-                throw error 
-
+                console.log('Não foi possível criar o projeto:', error);
+                throw new Error(`Erro ao criar o projeto: ${error.message}`);
             }
-
         }
 
 

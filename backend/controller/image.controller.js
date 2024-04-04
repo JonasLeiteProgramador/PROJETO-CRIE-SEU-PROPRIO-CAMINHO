@@ -32,7 +32,13 @@ export const createImage = (req, res, next) => {
         console.log('Processamento da imagem concluído.tamo  Criando  a imagem...');
         
         const { projectId } = req.body; 
-
+         
+          
+          if (!req.file) {
+            console.error('Nenhum arquivo enviado');
+            res.status(400).json({ message: 'Nenhum arquivo enviado' });
+            return;
+        }
         
         const inputPath = req.file.path;
 
